@@ -6,7 +6,7 @@ import { supabase } from './supabase';
 export async function getCategories() {
   const { data, error } = await supabase
     .from('culture_categories')
-    .select('id, slug, name_en, name_ta, sort_order')
+    .select('id, slug, name_en, name_ta, sort_order, image_url')
     .order('sort_order', { ascending: true });
   if (error) return { categories: [], error: error.message };
   return { categories: data || [] };
@@ -18,7 +18,7 @@ export async function getCategories() {
 export async function getItemsByCategory(categoryId, level) {
   let q = supabase
     .from('culture_items')
-    .select('id, slug, name_en, name_ta, info_en, level, sort_order')
+    .select('id, slug, name_en, name_ta, info_en, level, sort_order, image_url')
     .eq('category_id', categoryId)
     .order('sort_order', { ascending: true });
   if (level) q = q.in('level', ['beginner', level]);

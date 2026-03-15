@@ -7,4 +7,8 @@ export const radii = {
   lg: 18,
   pill: 25,
   round: 999,
+  // Named for consistency
+  accentBar: 3,
+  line: 2,
+  cardLarge: 24,
 };

@@ -3,3 +3,5 @@
 export { colors } from './colors';
 export { spacing } from './spacing';
 export { typography } from './typography';
+export { shadows } from './shadows';
+export { screenGradientColors, accentBarGradientColors, toggleActiveGradientColors, sectionLineExploreGradientColors, sectionLineFeaturedGradientColors, cardOverlayGradientColors } from './gradients';

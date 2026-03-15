@@ -12,7 +12,8 @@
     "supabase:link": "dotenv -e .env -- supabase link --project-ref vxnahtzekhcorloqzdqa",
     "supabase:db-push": "dotenv -e .env -- supabase db push",
     "seed:quiz": "dotenv -e .env -- node scripts/seed-quiz-questions.js",
-    "seed:culture": "dotenv -e .env -- node scripts/seed-culture.js"
+    "seed:culture": "dotenv -e .env -- node scripts/seed-culture.js",
+    "upload:culture-images": "dotenv -e .env -- node scripts/upload-culture-images.js"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "2.2.0",
