@@ -13,7 +13,13 @@
     "supabase:db-push": "dotenv -e .env -- supabase db push",
     "seed:quiz": "dotenv -e .env -- node scripts/seed-quiz-questions.js",
     "seed:culture": "dotenv -e .env -- node scripts/seed-culture.js",
-    "upload:culture-images": "dotenv -e .env -- node scripts/upload-culture-images.js"
+    "upload:culture-images": "dotenv -e .env -- node scripts/upload-culture-images.js",
+    "seed:thirukural": "dotenv -e .env -- node scripts/seed-thirukural.js",
+    "import:thirukural-explanations": "dotenv -e .env -- node scripts/import-thirukural-explanations.js",
+    "insert:thirukural-explanations": "dotenv -e .env -- node scripts/insert-thirukural-explanations.js",
+    "insert:thirukural-detail-content": "dotenv -e .env -- node scripts/insert-thirukural-detail-content.js",
+    "generate:thirukural-explanations": "dotenv -e .env -- node scripts/generate-thirukural-explanations.js",
+    "seed:aathichudi": "dotenv -e .env -- node scripts/seed-aathichudi.js"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "2.2.0",

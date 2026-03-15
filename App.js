@@ -29,6 +29,22 @@ import QuizResultsScreen from './src/screens/QuizResultsScreen';
 import QuizReportsScreen from './src/screens/QuizReportsScreen';
 import { GroupQuizHomeScreen, GroupQuizCreateScreen, GroupQuizJoinScreen, GroupQuizLobbyScreen, GroupQuizResultsScreen } from './src/screens/groupQuiz';
 import { CultureHomeScreen, CultureCategoryScreen, CultureDetailScreen, CultureQuizScreen } from './src/screens/culture';
+import {
+  ThirukuralHomeScreen,
+  ThirukuralSectionScreen,
+  ThirukuralAdhigaramListScreen,
+  ThirukuralAdhigaramScreen,
+  ThirukuralDetailScreen,
+  ThirukuralPlayScreen,
+} from './src/screens/thirukural';
+import {
+  AathichudiHomeScreen,
+  AathichudiListScreen,
+  AathichudiDetailScreen,
+  AathichudiQuizSetupScreen,
+  AathichudiPlayScreen,
+  AathichudiQuizResultsScreen,
+} from './src/screens/aathichudi';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -91,6 +107,12 @@ function MainTabs({ profile, onRefreshProfile }) {
       <Tab.Screen name="Culture" options={{ tabBarIcon: () => <Text>🌸</Text>, tabBarLabel: 'Culture' }}>
         {({ navigation }) => <CultureHomeScreen navigation={navigation} profile={profile} />}
       </Tab.Screen>
+      <Tab.Screen name="Thirukural" options={{ tabBarIcon: () => <Text>📜</Text>, tabBarLabel: 'Kural' }}>
+        {({ navigation }) => <ThirukuralHomeScreen navigation={navigation} />}
+      </Tab.Screen>
+      <Tab.Screen name="Aathichudi" options={{ tabBarIcon: () => <Text>📖</Text>, tabBarLabel: 'Aathichudi' }}>
+        {({ navigation }) => <AathichudiHomeScreen navigation={navigation} />}
+      </Tab.Screen>
       <Tab.Screen name="Badges" options={{ tabBarIcon: () => <Text>🏆</Text>, tabBarLabel: 'Badges' }}>
         {() => <PlaceholderScreen title="Badges" emoji="🏆" />}
       </Tab.Screen>
@@ -134,6 +156,16 @@ function MainStack({ profile, onRefreshProfile }) {
       <Stack.Screen name="CultureCategory" component={CultureCategoryScreen} />
       <Stack.Screen name="CultureDetail" component={CultureDetailScreen} />
       <Stack.Screen name="CultureQuiz" component={CultureQuizScreen} />
+      <Stack.Screen name="ThirukuralSection" component={ThirukuralSectionScreen} />
+      <Stack.Screen name="ThirukuralAdhigaramList" component={ThirukuralAdhigaramListScreen} />
+      <Stack.Screen name="ThirukuralAdhigaram" component={ThirukuralAdhigaramScreen} />
+      <Stack.Screen name="ThirukuralDetail" component={ThirukuralDetailScreen} />
+      <Stack.Screen name="ThirukuralPlay" component={ThirukuralPlayScreen} />
+      <Stack.Screen name="AathichudiList" component={AathichudiListScreen} />
+      <Stack.Screen name="AathichudiDetail" component={AathichudiDetailScreen} />
+      <Stack.Screen name="AathichudiQuizSetup" component={AathichudiQuizSetupScreen} />
+      <Stack.Screen name="AathichudiPlay" component={AathichudiPlayScreen} />
+      <Stack.Screen name="AathichudiQuizResults" component={AathichudiQuizResultsScreen} />
     </Stack.Navigator>
   );
 }
